@@ -1,0 +1,6 @@
+.cart span {
+    background-color: orange;
+    border-radius: 50%;
+    font-weight: bold;
+    padding: 0.2rem;
+}
