@@ -1,16 +1,14 @@
 import "./App.css";
-import Brand from "./components/Brand";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <main>
-      <div className="header">
-        <Brand />
-        <NavBar />
-      </div>
+      <NavBar />
       <ItemListContainer greeting={"La ropa sera básica, el unico sos vos."} />
+      <Footer />
     </main>
   );
 }

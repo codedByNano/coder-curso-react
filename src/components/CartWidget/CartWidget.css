@@ -1,3 +1,7 @@
+.cart {
+    padding: 5px;
+}
+
 .cart span {
     background-color: orange;
     border-radius: 50%;

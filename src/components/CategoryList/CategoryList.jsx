@@ -1,4 +1,4 @@
-import "./CategoryList.css"
+import "./CategoryList.css";
 
 function CategoryList() {
   return (
