@@ -1,11 +1,20 @@
 .categoryList {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 30px;
-    margin-right: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 30px;
+  margin-right: 30px;
 }
 
-.categoryList li a {
-    color: darkgray;
+.categories {
+  color: darkgray;
+  cursor: pointer;
+}
+
+.categories:hover {
+  color: gray;
+}
+
+.currentCategory {
+  color: black;
 }

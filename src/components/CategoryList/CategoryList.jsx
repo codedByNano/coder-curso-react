@@ -1,21 +1,45 @@
+import { NavLink } from "react-router-dom";
 import "./CategoryList.css";
+
+const myRoutes = [
+  {
+    id: 1,
+    path: "/shirt",
+    label: "Remeras",
+  },
+  {
+    id: 2,
+    path: "/tanktop",
+    label: "Musculosas",
+  },
+  {
+    id: 3,
+    path: "/hoodie",
+    label: "Buzos",
+  },
+  {
+    id: 4,
+    path: "/jacket",
+    label: "Camperas",
+  },
+];
 
 function CategoryList() {
   return (
     <nav>
       <ul className="categoryList">
-        <li>
-          <a href="">Remeras</a>
-        </li>
-        <li>
-          <a href="">Musculosas</a>
-        </li>
-        <li>
-          <a href="">Buzos</a>
-        </li>
-        <li>
-          <a href="">Camperas</a>
-        </li>
+        {myRoutes.map((route) => (
+          <li key={route.id}>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "currentCategory" : "categories"
+              }
+              to={route.path}
+            >
+              {route.label}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );

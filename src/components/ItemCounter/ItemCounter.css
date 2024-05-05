@@ -5,3 +5,7 @@
 .counterRender {
     margin: 0 10px;
 }
+
+.counterButton {
+    cursor: pointer;
+}

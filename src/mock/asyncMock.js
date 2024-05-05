@@ -33,6 +33,28 @@ const products = [
     price: 8000,
   },
   {
+    id: 4001,
+    title: "Musculosa Basic™ Negra",
+    type: "tanktop",
+    description:
+      "Musculosa de algodon 100% hipoalergénico. Lavar con agua fria. Industria Argentina.",
+    image:
+      "https://images.pexels.com/photos/17489386/pexels-photo-17489386/free-photo-of-dark-photo-of-a-man-wearing-black-clothing-standing-in-a-park.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    stock: 7,
+    price: 6700,
+  },
+  {
+    id: 4002,
+    title: "Musculosa Basic™ Blanca",
+    type: "tanktop",
+    description:
+      "Musculosa de algodon 100% hipoalergénico. Lavar con agua fria. Industria Argentina.",
+    image:
+      "https://images.pexels.com/photos/6550861/pexels-photo-6550861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    stock: 8,
+    price: 6700,
+  },
+  {
     id: 2001,
     title: "Buzo Basic™ Negro",
     type: "hoodie",
@@ -76,34 +98,23 @@ const products = [
     stock: 5,
     price: 12500,
   },
-  {
-    id: 4001,
-    title: "Musculosa Basic™ Negra",
-    type: "tanktop",
-    description:
-      "Musculosa de algodon 100% hipoalergénico. Lavar con agua fria. Industria Argentina.",
-    image:
-      "https://images.pexels.com/photos/17489386/pexels-photo-17489386/free-photo-of-dark-photo-of-a-man-wearing-black-clothing-standing-in-a-park.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    stock: 7,
-    price: 6700,
-  },
-  {
-    id: 4002,
-    title: "Musculosa Basic™ Blanca",
-    type: "tanktop",
-    description:
-      "Musculosa de algodon 100% hipoalergénico. Lavar con agua fria. Industria Argentina.",
-    image:
-      "https://images.pexels.com/photos/6550861/pexels-photo-6550861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    stock: 8,
-    price: 6700,
-  },
 ];
 
 export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products);
-    }, 2000);
+    }, 800);
+  });
+};
+
+export const prodByType = (type) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const filteredProducts = products.filter(
+        (product) => product.type === type
+      );
+      resolve(filteredProducts);
+    }, 800);
   });
 };

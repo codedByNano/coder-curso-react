@@ -6,6 +6,7 @@ function ItemListContainer({ greeting }) {
   const { products, isLoading } = useProducts();
 
   if (isLoading) return <h2 className="greeting">Cargando...</h2>;
+
   return (
     <div>
       <h2 className="greeting">{greeting}</h2>

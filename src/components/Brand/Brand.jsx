@@ -3,7 +3,7 @@ import "./Brand.css";
 function Brand() {
   return (
     <h1 className="brand">
-      <a href="">SOLID CLOTHES</a>
+      <a href="/">SOLID CLOTHES</a>
     </h1>
   );
 }
