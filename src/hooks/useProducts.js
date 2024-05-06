@@ -9,5 +9,5 @@ export default function useProducts() {
       .then((data) => setProducts(data))
       .finally(() => setIsLoading(false));
   }, []);
-  return { products, isLoading };
+  return { products, isLoading, setIsLoading };
 }

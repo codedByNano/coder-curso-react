@@ -1,9 +1,19 @@
 import ItemList from "../Items/ItemList";
-import useProducts from "../../hooks/useProducts";
+import useByCategory from "../../hooks/useByCategory";
 import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import useProducts from "../../hooks/useProducts";
 
-function ItemListContainer({ greeting }) {
-  const { products, isLoading } = useProducts();
+export default function ItemListContainer({ greeting }) {
+  const { type } = useParams();
+  const { products, isLoading, setIsLoading } = type
+    ? useByCategory(type)
+    : useProducts();
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [type, setIsLoading]);
 
   if (isLoading) return <h2 className="greeting">Cargando...</h2>;
 
@@ -14,5 +24,3 @@ function ItemListContainer({ greeting }) {
     </div>
   );
 }
-
-export default ItemListContainer;

@@ -118,3 +118,13 @@ export const prodByType = (type) => {
     }, 800);
   });
 };
+
+export const itemById = (id) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const numId = parseInt(id);
+      const newProduct = products.find((item) => item.id === numId);
+      resolve(newProduct);
+    }, 800);
+  });
+};

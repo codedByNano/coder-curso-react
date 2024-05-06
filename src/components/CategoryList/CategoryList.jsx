@@ -4,22 +4,22 @@ import "./CategoryList.css";
 const myRoutes = [
   {
     id: 1,
-    path: "/shirt",
+    path: "/products/shirt",
     label: "Remeras",
   },
   {
     id: 2,
-    path: "/tanktop",
+    path: "/products/tanktop",
     label: "Musculosas",
   },
   {
     id: 3,
-    path: "/hoodie",
+    path: "/products/hoodie",
     label: "Buzos",
   },
   {
     id: 4,
-    path: "/jacket",
+    path: "/products/jacket",
     label: "Camperas",
   },
 ];

@@ -1,6 +1,7 @@
 import "./Item.css";
 import useCount from "../../hooks/useCount";
 import ItemCounter from "../ItemCounter/ItemCounter";
+import { Link } from "react-router-dom";
 
 export default function Item({ item }) {
   const { count, increase, decrease } = useCount();
@@ -11,7 +12,7 @@ export default function Item({ item }) {
   };
 
   return (
-    <div className="itemCard">
+    <Link to={`/item/${item.id}`} className="itemCard">
       <div className="itemImg">
         <img src={item.image} alt={item.title} />
       </div>
@@ -29,6 +30,6 @@ export default function Item({ item }) {
           Agregar al carrito
         </button>
       </div>
-    </div>
+    </Link>
   );
 }
