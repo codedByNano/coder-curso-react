@@ -111,6 +111,7 @@ export const getProducts = () => {
 export const prodByType = (type) => {
   return new Promise((resolve) => {
     setTimeout(() => {
+      if (!type) resolve(products);
       const filteredProducts = products.filter(
         (product) => product.type === type
       );

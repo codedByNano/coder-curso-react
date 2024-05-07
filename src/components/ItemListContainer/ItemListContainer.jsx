@@ -7,9 +7,7 @@ import useProducts from "../../hooks/useProducts";
 
 export default function ItemListContainer({ greeting }) {
   const { type } = useParams();
-  const { products, isLoading, setIsLoading } = type
-    ? useByCategory(type)
-    : useProducts();
+  const { products, isLoading, setIsLoading } = useByCategory(type)
 
   useEffect(() => {
     setIsLoading(true);
