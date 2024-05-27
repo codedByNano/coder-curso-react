@@ -1,14 +1,21 @@
 import "./ItemDetailContainer.css";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useById from "../../hooks/useById";
 import ItemCounter from "../ItemCounter/ItemCounter";
 import useCount from "../../hooks/useCount";
+import CartContext from "../../CartContext/CartContext";
 
 export default function ItemDetailContainer() {
   const { id } = useParams();
   const { item, isLoading, setIsLoading } = useById(id);
-  const { count, increase, decrease } = useCount();
+  const { count, increase, decrease, reset } = useCount();
+  const { addToCart } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    addToCart(item, count);
+    reset();
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -32,10 +39,17 @@ export default function ItemDetailContainer() {
             increase={increase}
             decrease={decrease}
           />
-          <button className="addButton" onClick={() => onAdd(item, count)}>
+          <button
+            className="addButton"
+            onClick={handleAddToCart}
+            disabled={count === 0}
+          >
             Agregar al carrito
           </button>
-        </div>
+        </div> 
+        <p style={{ color: "#007bff" }}>
+          Quedan <strong>{item.stock - count}</strong> unidades disponibles
+        </p>
       </div>
     </div>
   );

@@ -19,17 +19,6 @@ export default function Item({ item }) {
       <h3 className="itemTitle">{item.title}</h3>
       <p className="itemInfo">{item.description}</p>
       <p className="itemPrice">${item.price}</p>
-      <div className="cartBox">
-        <ItemCounter
-          stock={item.stock}
-          count={count}
-          increase={increase}
-          decrease={decrease}
-        />
-        <button className="addButton" onClick={() => onAdd(item, count)}>
-          Agregar al carrito
-        </button>
-      </div>
     </Link>
   );
 }

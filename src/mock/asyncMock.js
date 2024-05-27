@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1001,
-    title: "Remera Basic™ Negra",
+    title: "Remera Solid™ Negra",
     type: "shirt",
     description:
       "Remera estilo Oversize fabricada en tela de algodón hilado 30. Lavar a no mas de 60° con ciclos de centrifugados cortos. Industria Argentina.",
@@ -12,7 +12,7 @@ const products = [
   },
   {
     id: 1002,
-    title: "Remera Basic™ Blanca",
+    title: "Remera Solid™ Blanca",
     type: "shirt",
     description:
       "Remera estilo Oversize fabricada en tela de algodón hilado 30. Lavar a no mas de 60° con ciclos de centrifugados cortos. Industria Argentina.",
@@ -23,7 +23,7 @@ const products = [
   },
   {
     id: 1003,
-    title: "Remera Basic™ Roja",
+    title: "Remera Solid™ Roja",
     type: "shirt",
     description:
       "Remera estilo Oversize fabricada en tela de algodón hilado 30. Lavar a no mas de 60° con ciclos de centrifugados cortos. Industria Argentina.",
@@ -34,7 +34,7 @@ const products = [
   },
   {
     id: 4001,
-    title: "Musculosa Basic™ Negra",
+    title: "Musculosa Solid™ Negra",
     type: "tanktop",
     description:
       "Musculosa de algodon 100% hipoalergénico. Lavar con agua fria. Industria Argentina.",
@@ -45,7 +45,7 @@ const products = [
   },
   {
     id: 4002,
-    title: "Musculosa Basic™ Blanca",
+    title: "Musculosa Solid™ Blanca",
     type: "tanktop",
     description:
       "Musculosa de algodon 100% hipoalergénico. Lavar con agua fria. Industria Argentina.",
@@ -56,7 +56,7 @@ const products = [
   },
   {
     id: 2001,
-    title: "Buzo Basic™ Negro",
+    title: "Buzo Solid™ Negro",
     type: "hoodie",
     description:
       "Buzo fabricada en poliester semi-impermeable. Lavar entre 40° y 60°. Dejar secar al aire libre. Industria Argentina.",
@@ -67,7 +67,7 @@ const products = [
   },
   {
     id: 2002,
-    title: "Buzo Basic™ Blanco",
+    title: "Buzo Solid™ Blanco",
     type: "hoodie",
     description:
       "Buzo fabricada en poliester semi-impermeable. Lavar entre 40° y 60°. Dejar secar al aire libre. Industria Argentina.",
@@ -78,7 +78,7 @@ const products = [
   },
   {
     id: 3001,
-    title: "Campera Basic™ Negra",
+    title: "Campera Solid™ Negra",
     type: "jacket",
     description:
       "Campera fabricada en algodon hilado y lino. Lavar entre 40° y 60°, modo lavado prenda delicada. Evitar blanqueadores. Industria Argentina.",
@@ -89,7 +89,7 @@ const products = [
   },
   {
     id: 3002,
-    title: "Campera Basic™ Blanca",
+    title: "Campera Solid™ Blanca",
     type: "jacket",
     description:
       "Campera fabricada en algodon hilado y lino. Lavar entre 40° y 60°, modo lavado prenda delicada. Evitar blanqueadores. Industria Argentina.",
