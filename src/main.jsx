@@ -1,18 +1,16 @@
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAb3N12z_tMCJJWXHfDoAK9v163dgtTtsM",
-    authDomain: "coder-ecom.firebaseapp.com",
-    projectId: "coder-ecom",
-    storageBucket: "coder-ecom.appspot.com",
-    messagingSenderId: "34672375639",
-    appId: "1:34672375639:web:7a035dcc4c46679f63b012"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
-  
+
 initializeApp(firebaseConfig);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <App />
-)
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
