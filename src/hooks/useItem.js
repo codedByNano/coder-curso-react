@@ -1,4 +1,10 @@
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -9,13 +15,17 @@ export default function useItem() {
 
   useEffect(() => {
     const db = getFirestore();
-    const itemDoc = doc(db, "products", id);
-    console.log(itemDoc);
 
-    getDoc(itemDoc)
+    const q = query(
+      collection(db, "products"),
+      where("id", "==", parseInt(id))
+    );
+
+    getDocs(q)
       .then((snapshot) => {
-        if (snapshot.exists()) {
-          setItem({ id: snapshot.id, ...snapshot.data() });
+        if (!snapshot.empty) {
+          const firstDoc = snapshot.docs[0];
+          setItem(firstDoc.data());
         }
       })
       .finally(() => {

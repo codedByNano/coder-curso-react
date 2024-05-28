@@ -23,7 +23,7 @@ export default function ItemDetailContainer() {
       <div className="imageContainer">
         <img src={item.image} alt={item.title} className="image" />
       </div>
-      <div className="itemDetail">
+      <div className="itemDetail"> 
         <h2 className="title">{item.title}</h2>
         <p className="description">{item.description}</p>
         <div className="cartBox">
