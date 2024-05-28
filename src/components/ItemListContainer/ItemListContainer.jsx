@@ -1,18 +1,18 @@
+import { useEffect } from "react";
+import useProducts from "../../hooks/useProducts";
 import ItemList from "../Items/ItemList";
-import useByCategory from "../../hooks/useByCategory";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 
 export default function ItemListContainer({ greeting }) {
+  const { loading, setLoading, products } = useProducts();
   const { type } = useParams();
-  const { products, isLoading, setIsLoading } = useByCategory(type)
 
   useEffect(() => {
-    setIsLoading(true);
-  }, [type, setIsLoading]);
+    setLoading(true);
+  }, [type]);
 
-  if (isLoading) return <h2 className="greeting">Cargando...</h2>;
+  if (loading) return <h2 className="greeting">Cargando...</h2>;
 
   return (
     <div>
